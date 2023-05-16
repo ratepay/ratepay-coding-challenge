@@ -1,20 +1,19 @@
 package com.ratepay.challenge.bo;
 
 
-import com.vladmihalcea.hibernate.type.json.JsonType;
+import io.hypersistence.utils.hibernate.type.json.JsonType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -23,7 +22,6 @@ import java.util.List;
 import static java.time.OffsetDateTime.now;
 
 @Entity(name = "orders")
-@TypeDef(name = "json", typeClass = JsonType.class)
 @Data
 @NoArgsConstructor
 public class Order {
@@ -40,7 +38,7 @@ public class Order {
 
     private OffsetDateTime created;
 
-    @Type(type = "json")
+    @Type(JsonType.class)
     @Column(columnDefinition = "json")
     private List<Product> products = new ArrayList<>();
 

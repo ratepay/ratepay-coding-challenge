@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.6</version>
+        <version>3.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ratepay</groupId>
@@ -14,11 +14,11 @@
     <name>Ratepay Live Coding Challenge</name>
     <description>Ratepay Live Coding Challenge</description>
     <properties>
-        <java.version>1.8</java.version>
-        <org.projectlombok.version>1.18.24</org.projectlombok.version>
-        <com.vladmihalcea.hibernate-types-55.version>2.20.0</com.vladmihalcea.hibernate-types-55.version>
+        <java.version>17</java.version>
+        <org.projectlombok.version>1.18.26</org.projectlombok.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
-        <org.assertj.version>3.23.1</org.assertj.version>
+        <org.assertj.version>3.24.2</org.assertj.version>
+        <hibernate.types.version>3.3.2</hibernate.types.version>
     </properties>
     <dependencies>
         <dependency>
@@ -35,9 +35,9 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>com.vladmihalcea</groupId>
-            <artifactId>hibernate-types-55</artifactId>
-            <version>${com.vladmihalcea.hibernate-types-55.version}</version>
+            <groupId>io.hypersistence</groupId>
+            <artifactId>hypersistence-utils-hibernate-60</artifactId>
+            <version>${hibernate.types.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
