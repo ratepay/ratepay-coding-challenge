@@ -8,12 +8,22 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(OrderController.class)
 class OrderControllerTest {
 
+    /*
+     *TODO: Write controller test to handle the scenario when the buyer does not exist.
+     * TODO: Write controller test to verify the save operation when the buyer already exists.
+     * Ensure to cover both cases thoroughly.
+     */
+
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    void test() {
+    public void testHandleNonExistentBuyer() {
+        // Your test code here
+    }
 
-        //TODO Task for candidate
+    @Test
+    public void testSaveOperationWithExistingBuyer() {
+        // Your test code here
     }
 }

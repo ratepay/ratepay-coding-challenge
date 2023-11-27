@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Alice",
+    "orders": [
+      {
+        "created": "2023-11-15T12:34:56.789Z",
+        "products": [
+          {
+            "title": "Book",
+            "price": 1.20
+          },
+          {
+            "title": "Cup",
+            "price": 3.50
+          }
+        ],
+        "totalAmount": 4.70
+      },
+      {
+        "created": "2023-11-15T12:34:56.789Z",
+        "products": [
+          {
+            "title": "Shelf",
+            "price": 70.00
+          }
+        ],
+        "totalAmount": 70.00
+      },
+      {
+        "created": "2023-11-15T12:34:56.789Z",
+        "products": [
+          {
+            "title": "Guitar",
+            "price": 250.00
+          }
+        ],
+        "totalAmount": 250.00
+      }
+    ]
+  },
+  {
+    "name": "John",
+    "orders": [
+      {
+        "created": "2023-11-05T12:34:56.789Z",
+        "products": [
+          {"title": "Ball", "price": 29.00},
+          {"title": "Shoes", "price": 120.00}
+        ],
+        "totalAmount": 149.00
+      },
+      {
+        "created": "2023-11-05T12:34:56.789Z",
+        "products": [
+          {"title": "Desk", "price": 499.00}
+        ],
+        "totalAmount": 499.00
+      }
+    ]
+  }
+]

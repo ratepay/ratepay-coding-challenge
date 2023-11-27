@@ -1,44 +1,50 @@
 package com.ratepay.challenge.bo;
 
+import jakarta.persistence.*;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity(name = "buyer")
-@Data
-@NoArgsConstructor
 public class Buyer {
 
-    public Buyer(String name, List<Order> orders) {
-        this.name = name;
-        orders.forEach(this::addOrder);
-    }
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     private String name;
 
     @OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Order> orders = new ArrayList<>();
+    private List<Orders> orders;
 
-    public void addOrder(Order order) {
-        orders.add(order);
-        order.setBuyer(this);
+    public Buyer() { }
+
+    public Buyer(String name, List<Orders> orders) {
+        this.name = name;
+        this.setOrders(orders);
     }
 
-    public void removeOrder(Order order) {
-        orders.remove(order);
-        order.setBuyer(null);
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
     }
 }

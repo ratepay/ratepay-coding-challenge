@@ -15,7 +15,6 @@ This project already includes:
 * Spring Data JPA
 * H2 Database
 * Lombok
-* MapStruct
 * AssertJ
 
 You don't have to include any other dependencies for this challenge (unless something is really needed by
