@@ -1,6 +1,5 @@
 package com.ratepay.challenge.util;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.ratepay.challenge.bo.Buyer;
@@ -20,7 +19,7 @@ import java.util.List;
 
 @Service
 public class JsonReaderService {
-
+    static final Logger logger = LoggerFactory.getLogger(JsonReaderService.class);
     private final ResourceLoader resourceLoader;
 
     public JsonReaderService(ResourceLoader resourceLoader) {
@@ -28,16 +27,15 @@ public class JsonReaderService {
     }
 
     public List<Buyer> readJsonFile() {
-        final Logger logger = LoggerFactory.getLogger(JsonReaderService.class);
         try {
-            Gson gson = new GsonBuilder()
+            var gson = new GsonBuilder()
                     .registerTypeAdapter(OffsetDateTime.class, new OffsetDateTimeTypeAdapter())
                     .create();
 
-            Resource resource = resourceLoader.getResource("classpath:sample.json");
+            var resource = resourceLoader.getResource("classpath:sample.json");
 
             try (InputStream inputStream = resource.getInputStream();
-                 InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
+                 var reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8)) {
 
                 Type listType = new TypeToken<List<Buyer>>() {}.getType();
                 List<Buyer> buyers =  gson.fromJson(reader, listType);
@@ -49,6 +47,7 @@ public class JsonReaderService {
 
                 return buyers;
             }
+
         } catch (IOException e) {
             logger.error(e.getMessage());
         }
