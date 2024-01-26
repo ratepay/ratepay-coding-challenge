@@ -16,7 +16,7 @@ public class Product {
     private BigDecimal price;
     @ManyToOne
     @JoinColumn(name = "orders_id", referencedColumnName = "id", nullable = false)
-    private Orders orders;
+    private ProductOrder orders;
 
     public Product() { }
 
@@ -25,11 +25,11 @@ public class Product {
         this.setPrice(price);
     }
 
-    public Orders getOrder() {
+    public ProductOrder getOrder() {
         return orders;
     }
 
-    public void setOrder(Orders order) {
+    public void setOrder(ProductOrder order) {
         this.orders = order;
     }
     public UUID getId() {
