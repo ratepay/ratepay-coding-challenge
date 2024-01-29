@@ -3,8 +3,7 @@
 ## Description
 
 This is the code for **Ratepay Live Coding Challenge**. Please read this README file and ensure beforehand that you are
-able to import the project
-to an IDE of your choice, build and run it. You don't have to implement something in advance, just get a feeling of the
+able to import the project to an IDE of your choice, build and run it. You don't have to implement something in advance, just get a feeling of the
 project, so you are mentally prepared for what we might ask you to do in our interview :)
 
 ### Dependencies
@@ -15,7 +14,6 @@ This project already includes:
 * Spring Data JPA
 * H2 Database
 * Lombok
-* MapStruct
 * AssertJ
 
 You don't have to include any other dependencies for this challenge (unless something is really needed by
