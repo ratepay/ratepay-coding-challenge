@@ -12,8 +12,12 @@ class OrderControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    void test() {
+    public void testHandleNonExistentBuyer() {
+        // Your test code here
+    }
 
-        //TODO Task for candidate
+    @Test
+    public void testSaveOperationWithExistingBuyer() {
+        // Your test code here
     }
 }

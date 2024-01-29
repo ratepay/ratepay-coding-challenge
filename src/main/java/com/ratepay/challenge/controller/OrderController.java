@@ -3,7 +3,4 @@ package com.ratepay.challenge.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class OrderController {
-
-    //TODO Task for candidate
-}
+public class OrderController { }
