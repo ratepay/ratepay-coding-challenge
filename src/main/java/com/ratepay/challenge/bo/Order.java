@@ -7,8 +7,9 @@ import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@Entity(name = "product_order")
-public class ProductOrder {
+@Entity
+@Table(name = "orders")
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -25,9 +26,9 @@ public class ProductOrder {
     @JoinColumn(name = "buyer_id", referencedColumnName="id", nullable = false)
     private Buyer buyer;
 
-    public ProductOrder() { }
+    public Order() { }
 
-    public ProductOrder(List<Product> products, BigDecimal totalAmount) {
+    public Order(List<Product> products, BigDecimal totalAmount) {
         this.setProducts(products);
         this.totalAmount = totalAmount;
         this.created = OffsetDateTime.now();
@@ -76,8 +77,8 @@ public class ProductOrder {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ProductOrder)) return false;
-        return id != null && id.equals(((ProductOrder) o).getId());
+        if (!(o instanceof Order)) return false;
+        return id != null && id.equals(((Order) o).getId());
     }
 
     @Override

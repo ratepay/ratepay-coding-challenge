@@ -31,6 +31,7 @@ To login use credentials:
 
 * user: sa
 * password: password
+* JDBC URL: jdbc:h2:mem:testdb
 
 (you can check credentials in `application.properties` file)
 

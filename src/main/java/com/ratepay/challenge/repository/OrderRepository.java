@@ -1,10 +1,10 @@
 package com.ratepay.challenge.repository;
 
-import com.ratepay.challenge.bo.ProductOrder;
+import com.ratepay.challenge.bo.Order;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface OrderRepository extends CrudRepository<ProductOrder, UUID> { }
+public interface OrderRepository extends CrudRepository<Order, UUID> { }
