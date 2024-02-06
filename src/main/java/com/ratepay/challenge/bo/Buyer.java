@@ -15,11 +15,11 @@ public class Buyer {
     private String name;
 
     @OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ProductOrder> orders;
+    private List<Order> orders;
 
     public Buyer() { }
 
-    public Buyer(String name, List<ProductOrder> orders) {
+    public Buyer(String name, List<Order> orders) {
         this.name = name;
         this.setOrders(orders);
     }
@@ -40,11 +40,11 @@ public class Buyer {
         this.name = name;
     }
 
-    public List<ProductOrder> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<ProductOrder> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 }
