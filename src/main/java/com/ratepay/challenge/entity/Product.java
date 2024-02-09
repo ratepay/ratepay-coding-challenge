@@ -1,4 +1,4 @@
-package com.ratepay.challenge.bo;
+package com.ratepay.challenge.entity;
 
 import jakarta.persistence.*;
 
