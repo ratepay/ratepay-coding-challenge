@@ -1,4 +1,4 @@
-package com.ratepay.challenge.bo;
+package com.ratepay.challenge.entity;
 
 import jakarta.persistence.*;
 
@@ -16,7 +16,7 @@ public class Product {
     private BigDecimal price;
     @ManyToOne
     @JoinColumn(name = "orders_id", referencedColumnName = "id", nullable = false)
-    private ProductOrder orders;
+    private Order orders;
 
     public Product() { }
 
@@ -25,11 +25,11 @@ public class Product {
         this.setPrice(price);
     }
 
-    public ProductOrder getOrder() {
+    public Order getOrder() {
         return orders;
     }
 
-    public void setOrder(ProductOrder order) {
+    public void setOrder(Order order) {
         this.orders = order;
     }
     public UUID getId() {
