@@ -11,13 +11,4 @@ class OrderControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
-    public void testHandleNonExistentBuyer() {
-        // Your test code here
-    }
-
-    @Test
-    public void testSaveOperationWithExistingBuyer() {
-        // Your test code here
-    }
 }

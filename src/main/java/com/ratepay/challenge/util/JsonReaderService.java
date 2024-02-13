@@ -2,7 +2,7 @@ package com.ratepay.challenge.util;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.ratepay.challenge.bo.Buyer;
+import com.ratepay.challenge.entity.Buyer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ResourceLoader;
