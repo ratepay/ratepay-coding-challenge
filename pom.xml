@@ -18,7 +18,7 @@
         <org.projectlombok.version>1.18.26</org.projectlombok.version>
         <org.assertj.version>3.24.2</org.assertj.version>
         <hibernate.types.version>3.3.2</hibernate.types.version>
-        <com.google.code.gson.version>2.10.1</com.google.code.gson.version>
+        <jackson.version>2.16.0</jackson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -40,9 +40,9 @@
             <version>${hibernate.types.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${com.google.code.gson.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
