@@ -18,7 +18,6 @@
         <org.projectlombok.version>1.18.26</org.projectlombok.version>
         <org.assertj.version>3.24.2</org.assertj.version>
         <hibernate.types.version>3.3.2</hibernate.types.version>
-        <jackson.version>2.16.0</jackson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -38,11 +37,6 @@
             <groupId>io.hypersistence</groupId>
             <artifactId>hypersistence-utils-hibernate-60</artifactId>
             <version>${hibernate.types.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
